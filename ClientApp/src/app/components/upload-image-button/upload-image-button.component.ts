@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
-import {FileUploader} from "ng2-file-upload";
+import { FileUploader } from "ng2-file-upload";
 import { UploadService } from 'src/app/services/upload.service';
 
 @Component({
@@ -10,25 +10,23 @@ import { UploadService } from 'src/app/services/upload.service';
 })
 export class UploadImageButtonComponent implements OnInit {
 
-  fileData: File = null;
+  files:FileList;
 
-  constructor(private uploadServ:UploadService) { }
+  constructor(private uploadServ: UploadService) { }
 
   ngOnInit() {
   }
 
-  fileProgress(fileInput: any) {
-    this.fileData = <File>fileInput.target.files[0];
-}
- 
-onSubmit() {
-    const formData = new FormData();
-    formData.append('file', this.fileData);
-    this.uploadServ.uploadIamge(formData, 'p1')
-      .subscribe(res => {
-        console.log(res);
-        alert('SUCCESS !!');
-      })
-}
+  onChange(files:FileList){
+    this.files = files;
+  }
+
+  onSubmit(files:FileList) {
+    debugger;
+    if(typeof files === 'undefined') return;
+    
+    
+    this.uploadServ.uploadIamge(files, 'p1');
+  }
 
 }

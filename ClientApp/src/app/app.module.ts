@@ -12,6 +12,8 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { MainTopNavComponent } from './components/main-top-nav/main-top-nav.component';
 import { MainBodyComponent } from './components/main-body/main-body.component';
 import { UploadImageButtonComponent } from './components/upload-image-button/upload-image-button.component';
+import { ShopMainComponent } from './components/shop-main/shop-main.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { UploadImageButtonComponent } from './components/upload-image-button/upl
     FetchDataComponent,
     MainTopNavComponent,
     MainBodyComponent,
-    UploadImageButtonComponent
+    UploadImageButtonComponent,
+    ShopMainComponent,
+    ProductCardComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -30,6 +34,7 @@ import { UploadImageButtonComponent } from './components/upload-image-button/upl
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: MainBodyComponent, pathMatch: 'full' },
+      { path: 'shop', component: ShopMainComponent },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
     ])

@@ -1,0 +1,12 @@
+<div style="max-width: 250px; min-height: 380px; border-radius: 0.5; height: 100%;">
+  <div>
+    <img [src]="product.image"  class="img-thumbnail">
+  </div>
+  <div>
+    <h3>{{product.name}}</h3>
+    <p>{{product.description}}</p>
+    <p>Price: <b>${{product.price}} USD</b></p>
+  </div>
+  <button class="btn btn-dark btn-block" (click)="clickedBuy()">Buy</button>
+  <hr>
+</div>
