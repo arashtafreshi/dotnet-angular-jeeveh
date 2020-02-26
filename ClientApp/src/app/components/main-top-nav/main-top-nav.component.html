@@ -5,6 +5,10 @@
       <button class="btn btn-light">Products</button>
       <button class="btn btn-light">Contact</button>
       <a class="btn btn-light" [routerLink]="['/shop']">Shop</a>
+      <a class="btn btn-warning" [routerLink]="['/cart']">
+        <span><i class="fas fa-shopping-cart"></i></span>
+        <span class="badge badge-light" style="margin-left: 5px;;">{{inCartTotatl>0?inCartTotatl:''}}</span>
+      </a>
     </div>
     
   </div>

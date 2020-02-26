@@ -1,0 +1,16 @@
+<p>
+  cart-main works!
+</p>
+<!-- <p *ngFor="let p of productIdsInCart"><b>{{GetProduct(p).name}}</b>  x  {{cartService.cart()[p]}} = {{GetProduct(p).price*cartService.cart()[p]}}</p> -->
+<div class="row">
+  <div class="col-md-9">
+    <div *ngFor="let p of productIdsInCart">
+      <app-cart-checkout-item [product]="GetProduct(p)" [count]="cartService.cart()[p]"></app-cart-checkout-item>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <h2>Total:</h2>
+    <h3>${{GetTotalPrice()}}</h3>
+    <button class="btn btn-block btn-success">Checkout</button>
+  </div>
+</div>

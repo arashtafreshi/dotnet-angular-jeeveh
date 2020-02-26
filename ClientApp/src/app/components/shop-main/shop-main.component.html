@@ -2,15 +2,12 @@
 <div>
   
   <!-- <p *ngFor="let c of inCartKeys">{{c}}: {{inCartKeys[c]}}</p> -->
-  <button class="btn btn-warning">
-    <span><i class="fas fa-shopping-cart"></i></span>
-    <span class="badge badge-light">{{inCartTotatl}}</span>
-  </button>
+  
 </div>
 <div>
   <div class="row">
     <div *ngFor="let p of prods" class="col-md-3">
-      <app-product-card [product]="p" (onPurchased)="purchased($event)"></app-product-card>
+      <app-product-card [product]="p"  (onPurchased)="purchased($event)"></app-product-card>
     </div>
   </div>
 </div>

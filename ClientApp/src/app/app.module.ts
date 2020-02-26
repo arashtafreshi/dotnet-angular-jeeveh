@@ -14,6 +14,8 @@ import { MainBodyComponent } from './components/main-body/main-body.component';
 import { UploadImageButtonComponent } from './components/upload-image-button/upload-image-button.component';
 import { ShopMainComponent } from './components/shop-main/shop-main.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
+import { CartMainComponent } from './components/cart-main/cart-main.component';
+import { CartCheckoutItemComponent } from './components/cart-checkout-item/cart-checkout-item.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { ProductCardComponent } from './components/product-card/product-card.com
     MainBodyComponent,
     UploadImageButtonComponent,
     ShopMainComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    CartMainComponent,
+    CartCheckoutItemComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -37,6 +41,7 @@ import { ProductCardComponent } from './components/product-card/product-card.com
       { path: 'shop', component: ShopMainComponent },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'cart', component: CartMainComponent },
     ])
   ],
   providers: [],

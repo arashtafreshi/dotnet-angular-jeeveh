@@ -7,6 +7,17 @@
     <p>{{product.description}}</p>
     <p>Price: <b>${{product.price}} USD</b></p>
   </div>
-  <button class="btn btn-dark btn-block" (click)="clickedBuy()">Buy</button>
+  <div class="row">
+    <div class="col-md-3">
+      <button (click)="decrease()" class="btn btn-dark">-</button>
+    </div>
+    <div class="col-md-6" style="text-align: center;" [ngClass]="{'inCart':counts>0}">
+      {{counts}}
+    </div>
+    <div class="col-md-3">
+      <button (click)="increase()" class="btn btn-dark">+</button>
+    </div>
+  </div>
+  <!-- <button class="btn btn-dark btn-block" (click)="clickedBuy()">Buy</button> -->
   <hr>
 </div>
