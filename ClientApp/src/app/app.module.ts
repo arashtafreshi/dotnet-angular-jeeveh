@@ -16,6 +16,7 @@ import { ShopMainComponent } from './components/shop-main/shop-main.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { CartMainComponent } from './components/cart-main/cart-main.component';
 import { CartCheckoutItemComponent } from './components/cart-checkout-item/cart-checkout-item.component';
+import { PaymentMainComponent } from './components/payment-main/payment-main.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CartCheckoutItemComponent } from './components/cart-checkout-item/cart-
     ShopMainComponent,
     ProductCardComponent,
     CartMainComponent,
-    CartCheckoutItemComponent
+    CartCheckoutItemComponent,
+    PaymentMainComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
